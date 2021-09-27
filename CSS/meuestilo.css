@@ -1,75 +1,161 @@
 *{
-    margin: 10px;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 body{
     font-family: 'Lora', serif;
+    background: url(../imagenes/barber.jpg); /* foto de fundo*/
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    
 }
 .padre{
     display: flex;
     flex-flow: column nowrap;
 }
+.margen-interno{
+    padding: 0 50px;
+}
     .header{
-        background: black;
+       
         display:flex;
         flex-flow: column nowrap;
     }
         .menu{
-            background: #FFD523;
+            background:rgba(0,0, 0, .1);
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            height: 100px;
+            height: 60px;
             align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
             
         }
             .logo{
-                background: #B2B1B9;
+                
                 flex: 1 1 auto;
-                height: 30px;
+                ;
+            }
+            .logo a{
+                color: #fff;
+                font-size: 30px;
+            }
+            .logo a:hover{
+                color:#343434;
             }
             .nav{
-                background: #B2B1B9;
+                
                 flex:  5 1 auto;
-                height: 30px ;
             }
+                .nav a{
+                color: #fff;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+            }
+
             .social{
-                background: #B2B1B9;
-                flex: 1 1 auto;
-                height: 30px
+                display: flex;
+                flex: 1 1 auto;          
+                
+            }
+                .social a{
+                color: #fff;
+                padding: 0 5px;
             }
             .texto-princi{
-                background: #7EB5A6;
+                height: 1000px;
+                display: flex;
+                align-items: center;
+
             }
                 h1{
-                    background: #C36839;
+                    font-family: 'Lora', serif;
+                    font-size: 21px;
+                    color: #fff;
+                    font-weight: 300;
+                    text-align: center;
+                    line-height: 1.6;
                 }
     .section{
-        background: #000;
+        /*background: #000;*/
         display: flex;
     }
         .articulos{
-            background: #7952B3;
+           /* background: #f7f7f7;*/
             display: flex;
             flex: 2 1 auto;
             flex-flow:row wrap;
             
         }
             .article{
-                background: #E1E8EB;
+                /*background: #ececec;*/
                 flex: 1 1 40% ;
+                font-size: 13px;
+                letter-spacing: 1px;
+                margin: 10px 10px 20px 10px;
+                flex: 1 1 15%;/*move as fotos de lugar, agrupa de maneira diferente*/
+            }
+            .article img{
+                width: 100%;
+            }
+            .article a{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px;
+                background: #000;
+                margin: 10px 0;
+                display: inline-block;
+            }
+            .article a:hover{
+                background: #546cc3;
+            }
+            h3{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px 0;
+                margin-top: -80px;
+                margin-left: 15px;
+            }
+            h2{
+                font-size: 25px;
+                text-transform: uppercase;
+                padding: 0px 0 10px 0;
+                color: #fff;
+                margin-left: 10px;
             }
             .navegacion{
-                background: #BECA5C;
+                background: #000;
                 flex: 1 1 100% ;
             }
+            .navegacion a{
+                color: #fff;
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+            }
         .aside{
-            background: #01937C;
-            flex: 1 1 auto;
+            background: #ececec;
+            margin: 10px 10px 10px 10px;
+            flex: 1 1 60%;
+        }
+        .aside img{
+            width: 100%;
+        }
+        h4{
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-transform: uppercase ;
         }
             .publicidad{
-                background: #9AD3BC;
+                background: 
             }
     .footer{
         background: #000;
@@ -77,9 +163,15 @@ body{
         justify-content: center;
     }
         .pie{
-        background: #3DB2FF;
-        width: 300px;
+        text-align: center;
     }
+        .pie a{
+            color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            padding: 0 10px;
+            letter-spacing: 2px;
+        }
     @media all and (max-width:800px){
         .section{
             flex-direction: column;
